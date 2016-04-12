@@ -1,0 +1,8 @@
+{
+  "name": "state-shape-designer",
+  "version": "0.0.1",
+  "description": "A redux state shape template designer",
+  "main": "server.js",
+  "repository": "",
+  "author": "Victor Kane <info@awebfactory.com>",
+}
