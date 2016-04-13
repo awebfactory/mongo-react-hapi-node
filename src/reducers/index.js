@@ -1,6 +1,8 @@
 const user = (state, action) => {
   switch (action.type) {
     case 'ADD_USER':
+      //console.log('state', state);
+      //console.log('action', action);
       return {
         id: action.id,
         user: action.user,
@@ -12,15 +14,12 @@ const user = (state, action) => {
 
 const users = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_TODO':
+    case 'ADD_USER':
+      //console.log('state before adding user', state);
       return [
         ...state,
         user(undefined, action)
       ]
-    case 'TOGGLE_TODO':
-      return state.map(t =>
-        user(t, action)
-      )
     default:
       return state
   }
