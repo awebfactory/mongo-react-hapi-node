@@ -1,0 +1,80 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "state-shapely/variables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "state-shapely/bootswatch";
+
+@import url("//fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic");
+
+p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: $gray-dark;
+}
+
+.rp-page {
+    margin-top: 75px;
+}
+
+.awf-header {
+    color: $awfDarkGreen;
+    margin-top: 40px;
+}
+
+footer img {
+    margin: 0 5px;
+}
+footer hr {
+    border-top: 1px solid $gray-lighter;
+}
+footer p {
+    color: $gray-light;
+}
+footer p a,
+footer p a:hover,
+footer p a:focus,
+footer p a:active {
+    color: $gray;
+}
+footer p a.sn {
+    color: $gray-light;
+} 
+footer p a:hover,
+footer p a:focus,
+footer p a:active {
+    color: $gray-dark;
+    text-decoration:none;
+}
+
+.navbar {
+    background-color: $antique-white;
+    min-height: 100px;
+}
+.navbar-fixed-top .nav-home {
+    line-height: 60px;
+    height: 60px;
+    font-size: 24px;
+    color: $brand-success;
+}
+.nav-home.logo img {
+    margin: 8px 0 0 10px;
+}
+.navbar-default ul.navbar-nav {
+    margin: 40px 50px;
+}
+.navbar-default ul.navbar-nav li a {
+    color:$brand-success;
+}
+.navbar-default ul.navbar-nav li a:hover,
+.navbar-default ul.navbar-nav li a:focus,
+.navbar-default ul.navbar-nav li a:active {
+    color: $awfDarkGreen;
+}
+.navbar-default .navbar-toggle {
+    background-color: $awfDarkGreen;
+}
+
+.sn-gh {
+    top: -2px;
+    position: relative;
+}
