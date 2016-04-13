@@ -14,7 +14,9 @@
     "watch-css": "mkdirp public/css && node-sass -w --output-style compressed styles/main.scss public/css/main.css",
     "clean": "npm-run-all -s cleanjs cleancss -c --silent",
     "cleanjs": "rm public/js/bundle.js",
-    "cleancss": "rm public/css/main.css"
+    "cleancss": "rm public/css/main.css",
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
+    "test1": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -26,10 +28,13 @@
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "morgan": "^1.7.0",
+    "node-uuid": "^1.4.7",
     "path": "^0.12.7",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "react-redux": "^4.4.4",
     "react-router": "^2.1.1",
+    "redux": "^3.4.0",
     "serve-static": "^1.10.2"
   },
   "devDependencies": {
@@ -40,9 +45,13 @@
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.2",
     "browserify": "^13.0.0",
+    "expect": "^1.16.0",
+    "expect-jsx": "^2.4.0",
     "mkdirp": "^0.5.1",
+    "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "npm-run-all": "^1.7.0",
+    "react-addons-test-utils": "^15.0.1",
     "watchify": "^3.7.0"
   },
   "babel": {
