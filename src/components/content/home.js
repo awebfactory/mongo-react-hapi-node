@@ -7,7 +7,7 @@ class Home extends React.Component {
             <div className="awf-header">
                 <h1>Welcome to Redux state shape template designer</h1>
             </div>
-            <p>Design actions, reducers, the store and a form to define to input data and conform the shape of your app's state</p>
+            <p>Design actions, reducers, the store and a form to define input data and conform the shape of your app's state</p>
         </div>
     );
   }
