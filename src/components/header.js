@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
-const Logo = () => <div className="nav-home logo"><Link to="/"><img src="images/logo.png" /></Link></div> 
+const Logo = () => <div className="nav-home logo"><Link to="/"><img className="logo-img img-responsive" src="images/logo.png" /></Link></div> 
 const Nav = () => {
 	return (
         <nav className="navbar navbar-default navbar-fixed-top">

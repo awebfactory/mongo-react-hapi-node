@@ -15,7 +15,7 @@ const user = (state, action) => {
 const users = (state = [], action) => {
   switch (action.type) {
     case 'ADD_USER':
-      //console.log('state before adding user', state);
+      console.log('state before adding user', state);
       return [
         ...state,
         user(undefined, action)

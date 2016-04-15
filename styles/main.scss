@@ -57,6 +57,7 @@ footer p a:active {
 }
 .nav-home.logo img {
     margin: 8px 0 0 10px;
+    max-width: 225px;
 }
 .navbar-default ul.navbar-nav {
     margin: 20px 50px;
@@ -71,6 +72,11 @@ footer p a:active {
 }
 .navbar-default .navbar-toggle {
     background-color: $awfDarkGreen;
+}
+
+// collapse in: collapsed menu appears after clicking on hamburger
+#rf-navbar.in {
+    margin-top: 10px;
 }
 
 .sn-gh {
