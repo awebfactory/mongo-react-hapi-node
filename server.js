@@ -4,6 +4,7 @@ var morgan = require('morgan');
 var serveStatic = require('serve-static');
 var bodyParser = require('body-parser');
 var path = require('path');
+var _ = require('lodash');
 
 // web app middleware
 var app = express();
@@ -18,6 +19,55 @@ app.use(bodyParser.json());
 
 // bootstrap public/index.html
 app.use(serveStatic(__dirname + '/public'))
+
+// server-side router
+var router = express.Router();
+
+// some user data to serve via REST api
+var users = {
+  "users": [
+    {
+      "uuid": "c34b0b66-771b-4614-8c5e-47c6ea9634a2",
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "walter",
+        "last": "mondale"
+      },
+      "email": "walter.mondale@example.com",
+    },
+    {
+      "uuid": "c22b0b66-771b-4614-8c5e-47c6ea9634a2",
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "victor",
+        "last": "kane"
+      },
+      "email": "victor.kane@example.com",
+    },
+]};
+
+// GET ./api/user
+router.get('/user', function(req, res) {
+	res.send(users.users);
+})
+
+// GET ./api/user/:id
+router.get('/user/:id', function(req, res) {
+    res.send(_.find(users.users, {
+        'uuid': req.params.id
+    }));
+})
+
+// GET ./api/user/email/:email
+router.get('/user/email/:email', function(req, res) {
+    res.send(_.find(users.users, {
+        'email': req.params.email
+    }));
+})
+
+app.use('/api', router);
 
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
