@@ -3,9 +3,8 @@ import { reduxForm } from 'redux-form'
 export const fields = [ 'firstName', 'lastName', 'email', 'sex', 'favoriteColor', 'employed', 'notes' ]
 
 class SimpleForm extends Component {
-  sendIt (e) {
-        //e.preventDefulat();
-        console.log(e);
+  sendIt (values) {
+        console.log(values);
   }
   render() {
     const {
