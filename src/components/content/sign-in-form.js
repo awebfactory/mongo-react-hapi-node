@@ -14,6 +14,11 @@ class SimpleForm extends Component {
       submitting
       } = this.props
     return (
+    <div className="container rp-page">
+      <div className="awf-header">
+        <h1>Simple Form examplei</h1>
+        <h2>from erikras' Redux Form</h2>
+      </div>
       <form onSubmit={handleSubmit(this.sendIt.bind(this))}>
         <div>
           <label>First Name</label>
@@ -84,6 +89,7 @@ class SimpleForm extends Component {
           </button>
         </div>
       </form>
+      </div>
     )
   }
 }
