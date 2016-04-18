@@ -2,11 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import {reducer as formReducer} from 'redux-form';
 import reducer from './reducers';
 
-let store = createStore(reducer);
+const reducers = {
+    reducer,
+    form: formReducer
+}
+
+const theReducer = combineReducers(reducers);
+
+
+let store = createStore(theReducer);
 
 ReactDOM.render((
     <Provider store={store}>

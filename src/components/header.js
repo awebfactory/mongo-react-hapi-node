@@ -25,6 +25,9 @@ const Nav = () => {
                         <li>
                             <Link to='signin' activeClassName="active">Sign In</Link>
                         </li>
+                        <li>
+                            <Link to='simple' activeClassName="active">SimpleForm</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
