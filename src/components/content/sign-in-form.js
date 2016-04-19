@@ -16,7 +16,7 @@ class SimpleForm extends Component {
     return (
     <div className="container rp-page">
       <div className="awf-header">
-        <h1>Simple Form examplei</h1>
+        <h1>Simple Form example</h1>
         <h2>from erikras' Redux Form</h2>
       </div>
       <form onSubmit={handleSubmit(this.sendIt.bind(this))}>
