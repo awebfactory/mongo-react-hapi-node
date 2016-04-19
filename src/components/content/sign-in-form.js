@@ -4,7 +4,8 @@ export const fields = [ 'firstName', 'lastName', 'email', 'sex', 'favoriteColor'
 
 class SimpleForm extends Component {
   sendIt (values) {
-        console.log(values);
+    console.log(values);
+    this.context.router.push('/about');
   }
   render() {
     const {
@@ -93,6 +94,8 @@ class SimpleForm extends Component {
     )
   }
 }
+
+SimpleForm.contextTypes = {router: React.PropTypes.object.isRequired}
 
 SimpleForm.propTypes = {
   fields: PropTypes.object.isRequired,
