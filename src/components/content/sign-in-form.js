@@ -5,6 +5,8 @@ export const fields = [ 'firstName', 'lastName', 'email', 'sex', 'favoriteColor'
 class SimpleForm extends Component {
   sendIt (values) {
     console.log(values);
+    localStorage.setItem('loginForm', values);
+    localStorage.setItem('loginForm2', JSON.stringify(values));
     this.context.router.push('/about');
   }
   render() {
