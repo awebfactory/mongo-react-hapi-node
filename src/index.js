@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory } from 'react-router';
+import { createHistory } from 'react-router/node_modules/history';
+import { Router, useRouterHistory } from 'react-router';
 import routes from './routes';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
@@ -14,8 +15,11 @@ const reducers = {
 
 const theReducer = combineReducers(reducers);
 
-
 let store = createStore(theReducer);
+
+const browserHistory = useRouterHistory(createHistory)({
+            basename: '/'
+        });
 
 ReactDOM.render(
     <Provider store={store}>

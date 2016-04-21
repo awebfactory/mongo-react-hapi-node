@@ -1,6 +1,8 @@
-# Diary
+# Dev Diary
 
-04/21/16 13:39:08
+[very rough notes indeed]
+
+## 04/21/16 13:39:08
 
 hapi dependencies:
 
@@ -18,7 +20,7 @@ Date:   Thu Apr 21 14:11:30 2016 -0300
     hapi server serves bare-bones index.html home page
 ```
 
-04/21/16 14:12:36
+## 04/21/16 14:12:36
 
 Let's get react up from the html, via npm scripts.
 
@@ -60,16 +62,42 @@ got bundle.js:26769 Warning: Automatically setting basename using <base href> is
 
 Removed <base href> from index.html
 
-Then:
+Then, three terminal windows open, 1 for git and housekeeping, one for watch and one running server (with or without browsersync):
+
+Terminal #2
 
 ```
 $ npm run watch
 $ npm start
 ```
 
-testing by changing scss and js src files, then refreshing the runing browser.
-
-
+Terminal #3
 
 ```
+$ npm start
+```
+
+testing by changing scss and js src files, then refreshing the runing browser.
+
+Committed:
+
+commit 8a565d36f1045052497eb36295792c7faaa7d5b7
+Author: Victor Kane <victorkane@gmail.com>
+Date:   Thu Apr 21 15:39:28 2016 -0300
+
+    hapi server lifts up react with everything, statically
+
+## 04/21/16 15:40:00
+
+Invoking http://localhost:3000/about manually from the address bar gets: `{statusCode: 404, error: "Not Found"}`
+
+This used to work in Express, by giving everything (*) to the static index.html
+
+Everything is set up correctly but no matter what I do, I get 404 on the /about url manual placed into the address bar.
+
+I think the problem is with react-router, have to see whether hapi is imposing a 404 or whether react router is returning a 404
+
+
+
+
 
