@@ -1,3 +1,3 @@
-## Redux State Shape Template Designer
+## mongo-react-hapi-node
 
-Just something I am setting up to play around with action creators, reducers, and the best way of integrating forms.
+Personal undocumented discovery into this possibly very exciting stack
