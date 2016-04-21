@@ -97,7 +97,19 @@ Everything is set up correctly but no matter what I do, I get 404 on the /about 
 
 I think the problem is with react-router, have to see whether hapi is imposing a 404 or whether react router is returning a 404
 
+## 04/21/16 17:49:22
 
+I have confirmed on a local `tryexpress` branch that it is a `hapi` problem and not a problem with react-router. Using the index-express that uses the traditional * catch all, everything works fine:
+
+```
+// handle every other route with index.html, which will contain
+// a script tag to your application's JavaScript file(s).
+app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
+```
+
+So I definitely can't get `hapi` to play ball with a react router that's working great with express. 
 
 
 

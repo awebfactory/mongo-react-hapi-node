@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "start": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production node index-express.js",
     "build": "npm-run-all clean -s build-css build-js",
     "build-css": "mkdirp public/css && node-sass --output-style compressed styles/main.scss public/css/main.css",
     "build-js": "mkdirp public/js && browserify src/index.js -t babelify --outfile public/js/bundle.js",
@@ -30,9 +30,12 @@
   },
   "homepage": "https://github.com/awebfactory/mongo-react-hapi-node#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "boom": "^3.1.2",
+    "express": "^4.13.4",
     "hapi": "^13.3.0",
     "inert": "^3.2.0",
+    "morgan": "^1.7.0",
     "node-uuid": "^1.4.7",
     "path": "^0.12.7",
     "react": "^15.0.1",
@@ -40,7 +43,8 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.3.0",
     "redux": "^3.5.1",
-    "redux-form": "^5.1.1"
+    "redux-form": "^5.1.1",
+    "serve-static": "^1.10.2"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
